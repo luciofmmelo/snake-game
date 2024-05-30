@@ -25,11 +25,12 @@
           <span class="menu-title">Start</span>
           <span class="menu-subtitle">Let's Go?!</span>
           <input type="number"
-                 placeholder="Initial velocity"
+                 id="velocity-input"
                  class="menu-input"
                  min="1"
                  max="10"
           />
+          <label for="velocity-input">Initial velocity</label>
           <button id="button-play"
                   class="menu-button">
                   <span class="material-symbols-outlined"> play_circle </span>
@@ -68,12 +69,12 @@
 
     <header id="header">
             <div class="header-text">
-                <h3>Score:</h3>
-                <span class="score-value">00</span>
+                 <h3>Score:</h3>
+                 <span id="score-value">00</span>
             </div>
             <div class="header-text">
-                <h4>Player</h4>
-                <span class="player-name"></span>
+                 <h4>Player:</h4>
+                 <span id="player-name"></span>
             </div>
     </header>
 
