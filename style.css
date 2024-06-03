@@ -1,5 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+:root {
+    --primary-color: rgb(83, 146, 167);
+    --secondary-color: rgb(255, 188, 162);
+    --tertiary-color: rgb(194, 61, 0);
+    --field-color: rgb(44, 51, 44);
+    --menu-color: rgb(33, 28, 26);
+    --font-color: white;
+    --background-color: black;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,8 +23,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--font-color);
 }
 
 
@@ -24,18 +34,18 @@ body {
     position: absolute;
     top: 30dvh;
     width: 350px;
-    display: none;  /* MUDAR */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 10px;
     z-index: 1;
-    background-color: rgb(33, 28, 26);
+    background-color: var(--menu-color);
     padding: 30px;
-    border: 3px white double;
+    border: 3px var(--font-color) double;
     border-radius: 5px;
-    outline: 2px white double;
-    box-shadow: 0 0 50px rgb(83, 146, 167);
+    outline: 2px var(--font-color) double;
+    box-shadow: 0 0 50px var(--primary-color);
 }
 
 .menu-title {
@@ -52,7 +62,7 @@ body {
     margin-bottom: 20px;
     padding: 10px;
     border-radius: 2px;
-    color: #333;
+    color: var(--tertiary-color);
     font-size: 1em;
     outline: none;
 }
@@ -71,15 +81,15 @@ body {
     border-radius: 2px;
     border-style: double;
     cursor: pointer;
-    border-color: rgb(83, 146, 167);
-    background-color: black;
-    color: rgb(255, 188, 162);
+    border-color: var(--primary-button-color);
+    background-color: var(--background-color);
+    color: var(--secondary-button-color);
 }
 
 .menu-button:hover {
-    border-color: rgb(255, 188, 162);
-    background-color: rgb(83, 146, 167);
-    color: rgb(194, 61, 0);
+    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    color: var(--tertiary-color);
 }
 
 
@@ -87,7 +97,7 @@ body {
 
 #menu-screen-play > label {
     font-size: 12px;
-    color: lightblue;
+    color: var(--primary-color);
     opacity: 10%;
     margin-top: -20px;
 }
@@ -98,10 +108,10 @@ body {
     display: none;
 }
 
-#button-screen-play,
-#button-screen-pause,
-#button-screen-next-level,
-#button-screen-game-over {
+#button-play,
+#button-pause,
+#button-next-level,
+#button-reset {
 
 }
 
@@ -126,9 +136,9 @@ body {
 }
 
 canvas {
-    background-color: rgb(44, 51, 44);
+    background-color: var(--field-color);
     border-width: 0cm;
-    border-color: rgb(255, 255, 255);
+    border-color: var(--font-color);
     min-width: none;
     /* filter: blur(4px); */
 }
